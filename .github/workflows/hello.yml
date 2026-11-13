@@ -1,0 +1,18 @@
+# workflow
+#name the workflow
+name: Hello
+
+# On tells when the workflow should run
+on: 
+  workflow_dispatch: 
+#jobs-> what the workfflow should do
+jobs:
+  say-hello:
+  #ephermal container -> which lasts for the short period of time
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello
+      run: echo "hello dosto"
+    
+#steps
+#actions
