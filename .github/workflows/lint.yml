@@ -1,0 +1,16 @@
+name: auto lint
+
+on: 
+  push: 
+    paths: "*.py"
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name : clone the code
+        uses : actions/checkout@v7
+      - name : intall linter
+        uses: astral-sh/ruff-action@v4.1.0
+
+        
